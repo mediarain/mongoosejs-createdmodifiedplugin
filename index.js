@@ -7,7 +7,8 @@ module.exports = exports = function createdModifiedPlugin (schema, options) {
       type: Date,
       'default': Date.now
     }, modified: {
-      type: Date
+      type: Date,
+      'default': Date.now
     } 
   });
 
