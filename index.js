@@ -2,13 +2,19 @@
 
 // lastMod.js
 module.exports = exports = function createdModifiedPlugin (schema, options) {
+  var select = false
+  if (options && options.select == true){
+    select = true
+  }
   schema.add({ 
     created: {
       type: Date,
-      'default': Date.now
+      'default': Date.now,
+      select: select
     }, modified: {
       type: Date,
-      'default': Date.now
+      'default': Date.now,
+      select: select
     } 
   });
 
